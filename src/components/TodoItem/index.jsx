@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 import trashIcon from './assets/trash.png';
 
-const TodoItem = ({todo, memo, dueTime, dueMeridiem}) => {
+const TodoItem = ({id, todo, memo, dueTime, dueMeridiem, onDeleteClick}) => {
     return (
         <div className="TodoItem">
             <div className="TodoItem-dueTime">
@@ -18,7 +18,7 @@ const TodoItem = ({todo, memo, dueTime, dueMeridiem}) => {
                 </div>
             </div>
             <div className="TodoItem-delete">
-                <button className="TodoItem-delete__button">
+                <button onClick={() => onDeleteClick(id)} className="TodoItem-delete__button">
                     <img src={trashIcon} alt="Delete" className="TodoItem-delete__buttonIcon" />
                 </button>
             </div>

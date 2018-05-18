@@ -3,6 +3,8 @@
     grid-template-columns: 60px 185px min-content;
     align-items: center;
     padding: 10px 0;
+    animation-name: appear;
+    animation-duration: 0.5s;
 }
 
 .TodoItem-dueTime {
@@ -62,4 +64,14 @@
 
 .TodoItem-delete__buttonIcon {
     width: 100%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
